@@ -37,7 +37,7 @@
 
 ### 크롤링 데이터 수집 (네이버 한국기사)
 - 크롤링 데이터 : **"date", "title", "content", "link"**
-- 검색어: "medical robot OR surgical robot", "Intuitive+Surgical", "Stryker+Corporation", "Medtronic", "Globus+Medical", "Asensus+Surgical", "Smith...", "Johnson..."
+- 검색어: "surgical robot OR medical robot", "Intuitive+Surgical", "Stryker+Corporation", "Medtronic", "Globus+Medical", "Asensus+Surgical", "Smith+%26+Nephew", "Johnson+%26+Johnson"
 
 ### 크롤링 데이터 수집 (구글 미국기사)
 - 크롤링 데이터 : **"date", "title", "content", "link", keyword"**
