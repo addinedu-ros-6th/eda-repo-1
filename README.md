@@ -25,3 +25,57 @@
 |웹 크롤링| <img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=Selenium&logoColor=white" /> Newspaper3k| 
 |DB|<img src="https://img.shields.io/badge/Amazon_RDS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" />|
 |협업|<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" /> <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" /> |
+
+
+## 📜 웹 크롤링 과정
+
+### 기업 및 사이트 선정
+- 한국 및 미국 기업들은 코스피, 나스닥/뉴욕증권거래소에 등재된 의료 로봇 섹터를 기준으로 선정.
+- 한국 기사들은 네이버 기사, 미국 기사들은 구글 뉴스를 통해 크롤링 진행.
+
+### 크롤링 데이터 수집 (네이버 한국기사)
+- 크롤링 데이터 : **"date", "title", "content", "link"**
+- 검색어: "medical robot OR surgical robot", "Intuitive+Surgical", "Stryker+Corporation", "Medtronic", "Globus+Medical", "Asensus+Surgical", "Smith...", "Johnson..."
+
+### 크롤링 데이터 수집 (구글 미국기사)
+- 크롤링 데이터 : **"date", "title", "content", "link", keyword"**
+- 검색어 : "의료 로봇", "고영", "큐렉소", "미래컴퍼니"
+
+### 수집 데이터 전처리 과정 (네이버 한국기사)
+내용내용내용
+
+### 수집 데이터 전처리 과정 (구글 미국기사)
+내용내용내용
+
+## 감성분석
+### 감성분석 모델 적용 (pipeline)
+내용내용내용
+
+### Roberta 딥러닝
+내용내용내용
+
+## 데이터 베이스 구축
+내용내용내용
+
+## 데이터 분석 및 시각화
+### 뉴스 기사량과 주식의 상관관계
+(대표 시각화 자료 한두개)
+(설명 한줄)
+
+### 뉴스 데이터와 주식의 등락에 대한 상관관계 분석
+(대표 시각화 자료 한두개)
+(설명 한줄)
+
+
+### 주식과 뉴스 데이터의 감성분석 상관관계 및 키워드 시각화
+(대표 시각화 자료 한두개)
+(설명 한줄)
+
+### 특정구간에서의 특이점 파악
+(대표 시각화 자료 한두개)
+(설명 한줄)
+
+
+## 결론
+- 뉴스 데이터로 주식 시장 경향을 완전히 분석하기엔 한계가 존재함.
+- 하지만, 뉴스 키워드와 감성 분석 결과는 보조 지표로서의 충분한 역할을 함.
