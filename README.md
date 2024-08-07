@@ -56,11 +56,25 @@
 - 내용내용내용
 
 ### Roberta 딥러닝
-- 내용내용내용
+- RoBERTa는 BERT의 개선 버전으로, 더 많은 데이터와 긴 훈련 시간, 동적 마스킹, 그리고 다양한 최적화 기법을 통해 NLP 작업에서 뛰어난 성능을 보인다는 자료가 있어 학습모델로 선정하였다.<br>
+  주요 개선점으로는 더 큰 데이터셋 사용, 동적 마스킹, 그리고 문장 순서 예측 제거 등이 있다.<br><br>
+- 기존의 감정분석 모델과 수집한 뉴스데이터로 파인튜닝한 Roberta 모델의 뉴스데이터와 주식의 등락에 대한 상관관계 예측율 비교
+
+| 기존 사용 모델 | Roberta 딥러닝 모델  |
+|:--------------:|:----------------------------:|
+| ![original_model_senti_result](https://github.com/user-attachments/assets/b38b76d9-8004-44aa-9f6b-7bda3c86b52f) | ![model_fine-tuned_with_roberta_result](https://github.com/user-attachments/assets/92857fe1-1ffd-4798-9aa8-4c9630e45c42) |
 <br />
 
 ## 🗂️ 데이터 베이스 구축
-- 내용내용내용
+### 테이블 목록
+
+- article(기사테이블)
+- stock_info(주식정보 테이블)
+- sentiment(감정분석 테이블)
+- keyword(키워드 테이블)
+
+### TABLE ERD
+![database_tabel_erd](https://github.com/user-attachments/assets/7f8041b3-6cbd-44f2-8e0b-fee195db47d0)
 <br />
 
 ## 🗂️ 데이터 분석 및 시각화
