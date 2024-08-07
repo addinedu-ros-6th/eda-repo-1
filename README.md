@@ -75,7 +75,7 @@
 
 ### TABLE ERD
 ![database_tabel_erd](https://github.com/user-attachments/assets/7f8041b3-6cbd-44f2-8e0b-fee195db47d0)
-<br />
+<br /><br />
 
 ## 🗂️ 데이터 분석 및 시각화
 ### 뉴스 기사량과 주식의 상관관계
