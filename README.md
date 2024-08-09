@@ -60,7 +60,7 @@
   주요 개선점으로는 더 큰 데이터셋 사용, 동적 마스킹, 그리고 문장 순서 예측 제거 등이 있다.<br><br>
 - 기존의 감정분석 모델과 수집한 뉴스데이터로 파인튜닝한 Roberta 모델의 뉴스데이터와 주식의 등락에 대한 상관관계 예측율 비교
 
-| 기존 사용 모델 | Roberta 딥러닝 모델  |
+| 기존 사용 모델 | Roberta 딥러닝 추가학습 시킨 모델 |
 |:--------------:|:----------------------------:|
 | ![original_model_senti_result](https://github.com/user-attachments/assets/b38b76d9-8004-44aa-9f6b-7bda3c86b52f) | ![model_fine-tuned_with_roberta_result](https://github.com/user-attachments/assets/92857fe1-1ffd-4798-9aa8-4c9630e45c42) |
 <br />
