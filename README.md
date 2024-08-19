@@ -29,7 +29,7 @@
 |IDE| <img src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" /> <img src="https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white" /> <img src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252" />|
 |언어| <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />   |
 |EDA 시각화|<img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" /> <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" /> <img src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white" /> <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" /> <img src="https://github.com/user-attachments/assets/e6aabca4-a5da-43ed-ba67-fa243e54ff74" />|
-|웹 크롤링| <img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=Selenium&logoColor=white" /> Newspaper3k| 
+|웹 크롤링| <img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=Selenium&logoColor=white" /> <img src="https://github.com/user-attachments/assets/9bcc11e5-14d1-40b1-99bb-fee057bb4150" /> Newspaper3k| 
 |DB|<img src="https://img.shields.io/badge/Amazon_RDS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" />|
 |협업|<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" /> <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" /> |
 <br />
@@ -39,7 +39,7 @@
 ### 기업 및 사이트 선정
 - 한국 및 미국 기업들은 코스피, 나스닥/뉴욕증권거래소에 등재된 의료 로봇 섹터를 기준으로 선정.
 - 한국 기사들은 네이버 기사, 미국 기사들은 구글 뉴스를 통해 크롤링 진행.
-- 크롤링 데이터 : **"date", "title", "content", "link", keyword"**
+- 크롤링 데이터 칼럼명 : **"date", "title", "content", "link", keyword"**
 
 | 네이버 검색어 | 구글 검색어 |
 |:-----------------:|:----------------------:|
