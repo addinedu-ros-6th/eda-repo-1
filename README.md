@@ -41,15 +41,26 @@
 - 한국 기사들은 네이버 기사, 미국 기사들은 구글 뉴스를 통해 크롤링 진행.
 - 크롤링 데이터 : **"date", "title", "content", "link", keyword"**
 
+| 네이버 검색어 | 구글 검색어 |
+|:-----------------:|:----------------------:|
+|의료 로봇|surgical robot OR medical robot|
+|고영 |Intuitive+Surgical|
+|큐렉소|Stryker+Corporation|
+|미래컴퍼니|Medtronic|
+|-|Globus+Medical|
+|-|Asensus+Surgical|
+|-|Smith+%26+Nephew|
+|-|Johnson+%26+Johnson|
+
+<br />
+
 ### 크롤링 데이터 수집
 #### 네이버 한국기사
-- 검색어 : "의료 로봇", "고영", "큐렉소", "미래컴퍼니"
-- 크롤링 방법: 최대 4000개의 기사량만 뜨기 때문에 Selenium을 사용해 최대치로 스크롤 후 새로운 높이 계산. 새로운 높이가 이전 높이와 같으면 더 이상 로드할 내용이 없으므로 스크롤 종료. BeautifulSoup을 사용하여 기사 정보 추출.
+- 크롤링 방법: 네이버는 최대 4000개의 기사량만 뜨기 때문에 Selenium을 사용해 최대치로 스크롤 다운 후 스크롤 높이 계산. 새로운 높이가 이전 높이와 같으면 더 이상 로드할 내용이 없으므로 스크롤 종료하는 형식으로 반복문. BeautifulSoup을 사용하여 기사 정보 추출.
 - 기사 원문 추출: Newspaper3k의 article 함수를 통해 url 링크로 HTML 접근 후 본문 다운로드 및 추출.
 - 기사 핵심 키워드 추출: konlpy.tag의 Okt class를 통해 명사 키워드를 추출함.
 
 #### 구글 미국기사
-- 검색어: "surgical robot OR medical robot", "Intuitive+Surgical", "Stryker+Corporation", "Medtronic", "Globus+Medical", "Asensus+Surgical", "Smith+%26+Nephew", "Johnson+%26+Johnson"
 - 크롤링 방법: selenium을 사용해 headless webdriver에 구글 뉴스 검색 URL으로 접근. URL에 키워드(query), 최소 날짜(cd_min), 최대날짜(cd_max), 검색지역(hl=en) 등 필요한 세부 항목들만 바꿔가면서 검색어별로 검색 후 크롤링 해옴.
 - 기사 원문 추출 : Newspaper3k의 article 함수를 통해 url 링크로 HTML 접근 후 본문 다운로드 및 추출. 
 - 기사 핵심 키워드 추출: Newspaper3k의 article 함수에 자연어 처리 함수 적용 후 키워드 추출.
