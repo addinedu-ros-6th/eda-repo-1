@@ -35,25 +35,33 @@
 - 한국 및 미국 기업들은 코스피, 나스닥/뉴욕증권거래소에 등재된 의료 로봇 섹터를 기준으로 선정.
 - 한국 기사들은 네이버 기사, 미국 기사들은 구글 뉴스를 통해 크롤링 진행.
 
-### 크롤링 데이터 수집 (네이버 한국기사)
+### 크롤링 데이터 수집
+#### 네이버 한국기사
 - 크롤링 데이터 : **"date", "title", "content", "link"**
-- 검색어: "surgical robot OR medical robot", "Intuitive+Surgical", "Stryker+Corporation", "Medtronic", "Globus+Medical", "Asensus+Surgical", "Smith+%26+Nephew", "Johnson+%26+Johnson"
-
-### 크롤링 데이터 수집 (구글 미국기사)
-- 크롤링 데이터 : **"date", "title", "content", "link", keyword"**
 - 검색어 : "의료 로봇", "고영", "큐렉소", "미래컴퍼니"
+- 크롤링 방법: 최대 4000개의 기사량만 뜨기 때문에 Selenium을 사용해 최대치로 스크롤 후 새로운 높이 계산. 새로운 높이가 이전 높이와 같으면 더 이상 로드할 내용이 없으므로 스크롤 종료. BeautifulSoup을 사용하여 기사 정보 추출.
+- 기사 원문 추출: Newspaper3k의 article 함수를 통해 url 링크로 HTML 접근 후 본문 다운로드 및 추출.
+- 기사 핵심 키워드 추출: konlpy.tag의 Okt class를 통해 명사 키워드를 추출함.
 
-### 수집 데이터 전처리 (네이버 한국기사)
-- 크롤링 과정에서 잘못 가져와진 데이터들과 date가 nat 값인 데이터들을 제거 
+#### 구글 미국기사
+- 크롤링 데이터 : **"date", "title", "content", "link", keyword"**
+- 검색어: "surgical robot OR medical robot", "Intuitive+Surgical", "Stryker+Corporation", "Medtronic", "Globus+Medical", "Asensus+Surgical", "Smith+%26+Nephew", "Johnson+%26+Johnson"
+- 크롤링 방법: selenium을 사용해 headless webdriver에 구글 뉴스 검색 URL으로 접근. URL에 키워드(query), 최소 날짜(cd_min), 최대날짜(cd_max), 검색지역(hl=en) 등 필요한 세부 항목들만 바꿔가면서 검색어별로 검색 후 크롤링 해옴.
+- 기사 원문 추출 : Newspaper3k의 article 함수를 통해 url 링크로 HTML 접근 후 본문 다운로드 및 추출. 
+- 기사 핵심 키워드 추출: Newspaper3k의 article 함수에 자연어 처리 함수 적용 후 키워드 추출.
 
-### 수집 데이터 전처리 (구글 미국기사)
-- 내용내용내용
+### 수집 데이터 전처리
+- 네이버와 구글 기사 모두 동일하게 검색어와 관련 없는 데이터나 nan 값이 들어간 데이터들은 모두 제거. 
+- java script를 사용한 웹사이트나 유료 구독형 paywall 기사들은 Newspaper3k로 본문이 안 읽혀서 어쩔 수 없이 모두 제거.
+- 구글 뉴스의 2020년부터 2024년 5월까지의 기사들을 크롤링 과정에서 최근 기사일수록 실제 언론사에서 발행된 기사가 아닌 개인 블로그, 주식 투자 리포트, 유투브 등 관련 없는 기사 데이터들도 포함되었어서 모두 예외처리 및 제거.
 
 <br />
 
 ## 🧑‍💻 감성분석
 ### 감성분석 모델 적용 (pipeline)
-- 내용내용내용
+- Transformers의 Pipeplines 함수를 활용해 네이버 한국 기사들에는 KR-FinBert-SC 라는 금융 특화 감성분석에 특화된 극문 모델을 적용.
+- 동일한 함수를 활용해 구글 미국 기사들에는 BERT-base-uncased 라는 해외 제품 리뷰 감성분석에 특화된 영문 모델을 적용해서 감성 분석 수치를 매김.
+- 기사 본문의 감성 분석 수치와 자연어 처리로 추출된 키워드들의 감성 분석 수치를 비교 후 동일하면 0, 다르면 1로 나타나는 match_status column도 추가해서 비교해보았음.
 
 ### Roberta 딥러닝
 - RoBERTa는 BERT의 개선 버전으로, 더 많은 데이터와 긴 훈련 시간, 동적 마스킹, 그리고 다양한 최적화 기법을 통해 NLP 작업에서 뛰어난 성능을 보인다는 자료가 있어 학습모델로 선정하였다.<br>
