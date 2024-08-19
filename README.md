@@ -110,8 +110,18 @@
 - (설명 한줄)
 
 ### 주식과 뉴스 데이터의 감성분석 상관관계 및 키워드 시각화
-- (대표 시각화 자료 한두개)
-- (설명 한줄)
+- 다양한 의료 기기들을 만드는 Medtronic의 뉴스 데이터의 감성분석 흐름이 비교적 뚜렷한 패턴들이 보여서 한번 집중 분석을 해보았음
+
+| 2020년 - 2024년 Medtronic 평균 종가와 감성분석 상관관계 시각화 |
+|:------------------:|
+|![Screenshot from 2024-08-19 23-48-56](https://github.com/user-attachments/assets/b7c4f284-620b-4745-9947-8511275e6b04)|
+
+| 종가 상승구간의 키워드 (2021년 3-4월) | 종가 하락구간의 키워드 (2021년 9-11월) |
+|:---------------------:|:----------------------------:|
+|
+|![Screenshot from 2024-08-19 23-51-00](https://github.com/user-attachments/assets/ec4177f5-054f-40a3-87cb-2a5c4135101c)|![Screenshot from 2024-08-19 23-51-28](https://github.com/user-attachments/assets/bfc18b09-6f57-44a3-8479-6f2d85799618)|
+<br />
+- 더 자세한 시각화 자료들은 여기서 https://github.com/addinedu-ros-6th/eda-repo-1/blob/9102a0dac1215dc7d6f99028fbf838a8aea2b0d1/media/correlation_of_stock_VS_news_article.pdf
 
 ### 특정구간에서의 특이점 파악
 - 특정 구간 산출
