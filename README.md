@@ -125,7 +125,7 @@
 - 확실히 상승구간에서 긍정수치가 많이 나왔으며 하락구간에서 부정수치가 많이 나옴.
 - Medtronic 뿐만 아니라 대부분의 미국 기사들은 한국 기사들에 비해 신제품 개발, FDA 허가, 연구 성공과 관련된 기사들은 대부분 종가 상승구간에서 나옴. 미국은 주식 투자를 할때 제품력을 많이 따지는 편일지도.
 - 반면에 한국 기사들은 애초에 중립 수치가 많아서 섯불리 판단하긴 어려움. 그러나 투자, M&A, 수출이라는 키워드를 지닌 기사들은 대부분 종가 상승구간에서 나옴. 23년 말부터 2차전지/리튬/반도체 주가가 전체적으로 하락세를 겪으며 의료 로봇 섹터도 어느정도 영향을 받는 중인 듯 함.
-- 다른 검색어들의 시각화 자료는 [여기서 확인 가능] (https://github.com/addinedu-ros-6th/eda-repo-1/blob/9102a0dac1215dc7d6f99028fbf838a8aea2b0d1/media/correlation_of_stock_VS_news_article.pdf)
+- 다른 검색어들의 시각화 자료는 [여기서 확인 가능](https://github.com/addinedu-ros-6th/eda-repo-1/blob/9102a0dac1215dc7d6f99028fbf838a8aea2b0d1/media/correlation_of_stock_VS_news_article.pdf)
 
 <br />
 
